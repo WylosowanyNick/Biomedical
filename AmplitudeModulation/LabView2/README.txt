@@ -1,0 +1,1 @@
+Poniższe pliki main realizują to samo symulacyjne środowisko pomiarowe. Pliki te różnią się jedynie rokiem wersji LabVIEW.

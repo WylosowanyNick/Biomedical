@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executable>
+  <category>Examples</category>
+  <title>cliModule</title>
+  <description><![CDATA[CLI module performing SDA on digital grayscale image.]]></description>
+  <version>0.0.1</version>
+  <documentation-url>https://home.agh.edu.pl/~pioro/sda/</documentation-url>
+  <license>Slicer</license>
+  <contributor>Andrzej Jasek (AGH), Adam Piórkowski (AGH)</contributor>
+  <acknowledgements>CLI module performing SDA on digital grayscale image.</acknowledgements>
+  <parameters>
+    <label>Input</label>
+    <description><![CDATA[Input parameters]]></description>
+    <image>
+      <label>Input Volume</label>
+      <name>inputVolume</name>
+      <description><![CDATA[Input volume to be processed]]></description>
+      <channel>input</channel>
+      <index>0</index>
+    </image>
+    <image reference="inputVolume">
+      <label>Output Volume</label>
+      <name>outputVolume</name>
+      <description><![CDATA[Result volume]]></description>
+      <channel>output</channel>
+      <index>1</index>
+    </image>
+    <boolean>
+      <label>Negative (dark background)</label>
+      <name>negateInputImage</name>
+      <longflag>--negateInputImage</longflag>
+      <flag>--n</flag>
+      <description><![CDATA[Negate input image]]></description>
+      <default>false</default>
+    </boolean>
+    <integer>
+      <label>Radious</label>
+      <name>radious</name>
+      <longflag>--radious</longflag>
+      <flag>--r</flag>
+      <description><![CDATA[Radious of the mask]]></description>
+      <default>25</default>
+    </integer>
+    <integer>
+      <label>Threshold</label>
+      <name>threshold</name>
+      <longflag>--threshold</longflag>
+      <flag>--t</flag>
+      <description><![CDATA[Threshold]]></description>
+      <default>14</default>
+    </integer>
+    <string-enumeration>
+      <label>Relationship</label>
+      <name>relationship</name>
+      <longflag>--relationship</longflag>
+      <flag>--R</flag>
+      <description><![CDATA[Relationship]]></description>
+      <default>&gt;=</default>
+      <element>&gt;=</element>
+      <element>&gt;</element>
+      <element>&lt;=</element>
+      <element>&lt;</element>
+    </string-enumeration>
+    <string-enumeration>
+      <label>Neighbourhood</label>
+      <name>neighbourhood</name>
+      <longflag>--neighbourhood</longflag>
+      <flag>--N</flag>
+      <description><![CDATA[Neighbourhood]]></description>
+      <default>disc</default>
+      <element>disc</element>
+      <element>horizontal</element>
+      <element>vertical</element>
+    </string-enumeration>
+  </parameters>
+</executable>

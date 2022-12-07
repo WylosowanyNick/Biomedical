@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>qSlicerloadableModuleModuleWidget</class>
+ <widget class="qSlicerWidget" name="qSlicerloadableModuleModuleWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>loadableModule</string>
+  </property>
+  
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton" native="true">
+     <property name="text" stdset="0">
+      <string>Display</string>
+     </property>
+
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="InputVolumeLabel">
+        <property name="text">
+         <string>Input Volume</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="qMRMLNodeComboBox" name="InputNodeComboBox">
+        <property name="nodeTypes">
+         <stringlist>
+          <string>vtkMRMLScalarVolumeNode</string>
+          <string>vtkMRMLModelNode</string>
+         </stringlist>
+        </property>
+        <property name="addEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="removeEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="editEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel" name="OutputVolumeLabel">
+        <property name="text">
+         <string>Output Volume</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="qMRMLNodeComboBox" name="OutputNodeComboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="nodeTypes">
+         <stringlist>
+          <string>vtkMRMLScalarVolumeNode</string>
+          <string>vtkMRMLModelNode</string>
+         </stringlist>
+        </property>
+        <property name="addEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="removeEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="editEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel" name="NegativeLabel">
+        <property name="text">
+         <string>Negative (dark background)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="NegativeCheckBox">
+        <property name="toolTip">
+         <string>Negate input image</string>
+        </property>
+        <property name="text">
+         <string> </string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="3" column="0">
+       <widget class="QLabel" name="RadiousLabel">
+        <property name="text">
+         <string>Radious</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="RadiousSpinBox">
+        <property name="toolTip">
+         <string>Radious of the mask</string>
+        </property>
+        <property name="value">
+         <number>25</number>
+        </property>
+       </widget>
+      </item>
+
+      <item row="4" column="0">
+       <widget class="QLabel" name="ThresholdLabel">
+        <property name="text">
+         <string>Threshold</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QSpinBox" name="ThreholdSpinBox">
+        <property name="toolTip">
+         <string>Threshold</string>
+        </property>
+        <property name="value">
+         <number>14</number>
+        </property>
+       </widget>
+      </item>
+
+      <item row="5" column="0">
+       <widget class="QLabel" name="RelationshipLabel">
+        <property name="text">
+         <string>Relationship</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_1">
+        <item>
+         <widget class="QRadioButton" name="GreaterOrEqualRadioButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Show numeric value as label text</string>
+          </property>
+          <property name="text">
+           <string>&gt;=</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">RelationshipButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="GreaterRadioButton">
+          <property name="toolTip">
+           <string>Show color name as label text</string>
+          </property>
+          <property name="text">
+           <string>&gt;</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">RelationshipButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="LessOrEqualRadioButton">
+          <property name="toolTip">
+           <string>Show color name as label text</string>
+          </property>
+          <property name="text">
+           <string>&lt;=</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">RelationshipButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="LessRadioButton">
+          <property name="toolTip">
+           <string>Show color name as label text</string>
+          </property>
+          <property name="text">
+           <string>&lt;</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">RelationshipButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <item row="6" column="0">
+       <widget class="QLabel" name="NeighbourhoodLabel">
+        <property name="text">
+         <string>Neighbourhood</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="DiscRadioButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>disc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">NeighbourhoodButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="HorizontalRadioButton">
+          <property name="toolTip">
+           <string>Show color name as label text</string>
+          </property>
+          <property name="text">
+           <string>horizontal</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">NeighbourhoodButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="VerticalRadioButton">
+          <property name="text">
+           <string>vertical</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">NeighbourhoodButtonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <item row="7" column="0" colspan="2">
+       <widget class="QPushButton" name="ApplyButton">
+        <property name="text">
+         <string>Apply</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+
+ <customwidgets>
+  <customwidget>
+   <class>qSlicerWidget</class>
+   <extends>QWidget</extends>
+   <header>qSlicerWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ctkCollapsibleButton</class>
+   <extends>QWidget</extends>
+   <header>ctkCollapsibleButton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>qMRMLNodeComboBox</class>
+   <extends>QWidget</extends>
+   <header>qMRMLNodeComboBox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>qSlicerloadableModuleFooBarWidget</class>
+   <extends>QWidget</extends>
+   <header>qSlicerloadableModuleFooBarWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../../../../../Libs/MRML/Widgets/Resources/qMRMLWidgets.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+    <sender>qSlicerloadableModuleModuleWidget</sender>
+    <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+    <receiver>InputNodeComboBox</receiver>
+    <slot>setMRMLScene(vtkMRMLScene*)</slot>
+  </connection>
+  <connection>
+    <sender>qSlicerloadableModuleModuleWidget</sender>
+    <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+    <receiver>OutputNodeComboBox</receiver>
+    <slot>setMRMLScene(vtkMRMLScene*)</slot>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="RelationshipButtonGroup"/>
+  <buttongroup name="NeighbourhoodButtonGroup"/>
+ </buttongroups>
+</ui>
