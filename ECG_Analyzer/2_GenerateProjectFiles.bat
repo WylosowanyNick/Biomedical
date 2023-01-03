@@ -1,0 +1,3 @@
+@echo off
+echo Generating project files...
+cmake -G Ninja -S ECG_Analyzer -B build

@@ -1,0 +1,3 @@
+@echo off
+echo Running application...
+build\ECG_Analyzer.exe

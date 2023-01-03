@@ -1,0 +1,3 @@
+@echo off
+echo Setting up environment for Qt usage...
+set PATH=E:\Qt\5.15.2\mingw81_64\bin;E:\Qt\Tools\mingw810_64\bin;E:\Qt\Tools\Ninja;E:\Qt\Tools\CMake_64\bin;%PATH%

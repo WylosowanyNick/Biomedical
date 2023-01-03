@@ -2,6 +2,10 @@
 
 Repo containing projects in the field of Biomedical Engineering.
 
+## [ECG Analyzer](ECG_Analyzer/README.md)
+
+This project (work in progress) was created as part of one subject in the field of Biomedical Engineering. The project I found interesting, thus I decided to rewrite it by myself. As GUI of this project was created mostly by myself, I used the source code written by myself and refactored it. On this moment, this is the only part of this (still developing) application. Some screenshoots of the app can be seen inside [AppScreens](ECG_Analyzer/AppScreens) folder.
+
 ## [Amplitude modulation](AmplitudeModulation/README.md)
 
 The scope of work in this project includes the creation of a virtual instrument in the LabView graphical environment, which will be used to analyze the properties of the voltage gain path with amplitude modulation for simulated signals.

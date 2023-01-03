@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qml/res/check_mark.png</file>
+        <file>qml/res/eye.png</file>
+        <file>qml/res/warning.png</file>
+        <file>qml/AlgorithmsWidgets/Baseline.qml</file>
+        <file>qml/Popups/PopupBusyIndicator.qml</file>
+        <file>qml/Popups/PopupError.qml</file>
+        <file>qml/Layouts/FirstLayout.qml</file>
+        <file>qml/Popups/PopupGenerateRaport.qml</file>
+        <file>qml/AlgorithmsWidgets/HeartClass.qml</file>
+        <file>qml/AlgorithmsWidgets/HRVDFA.qml</file>
+        <file>qml/AlgorithmsWidgets/HRVII.qml</file>
+        <file>qml/AlgorithmsWidgets/HRVI.qml</file>
+        <file>qml/MainMenuBar.qml</file>
+        <file>qml/OpenFileWindow.qml</file>
+        <file>qml/Layouts/SecondLayout.qml</file>
+        <file>qml/AlgorithmsWidgets/STSegment.qml</file>
+        <file>qml/Layouts/ThirdLayout.qml</file>
+        <file>qml/CustomWidgets/CButton.qml</file>
+        <file>qml/CustomWidgets/CCheckBox.qml</file>
+        <file>qml/CustomWidgets/CComboBox.qml</file>
+        <file>qml/CustomWidgets/CEye.qml</file>
+        <file>qml/CustomWidgets/CRadioButton.qml</file>
+        <file>qml/CustomWidgets/CRow.qml</file>
+        <file>qml/CustomWidgets/CSlider.qml</file>
+        <file>qml/CustomWidgets/CSwitch.qml</file>
+        <file>qml/AlgorithmsWidgets/Waves.qml</file>
+    </qresource>
+</RCC>

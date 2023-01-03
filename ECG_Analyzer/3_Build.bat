@@ -1,0 +1,3 @@
+@echo off
+echo Building project...
+cmake --build build
